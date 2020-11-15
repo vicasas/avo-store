@@ -4,7 +4,9 @@ import Footer from "@components/Footer"
 export default function Layout({ children }) {
   return (
     <div>
-      <Navbar />
+      <header>
+        <Navbar />
+      </header>
       {children}
       <Footer />
     </div>
