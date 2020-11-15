@@ -1,8 +1,7 @@
 // import App from 'next/app'
 import Layout from '@components/Layout'
 import '../styles/globals.css'
-import '../vendor/bootstrap/bootstrap-grid.css'
-import '../vendor/bootstrap/bootstrap-utilities.css'
+import '../vendor/bootstrap/bootstrap.css'
 
 function MyApp({ Component, pageProps }) {
   return (
