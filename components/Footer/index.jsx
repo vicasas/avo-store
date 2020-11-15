@@ -6,19 +6,19 @@ export default function Footer() {
       <div className='container'>
         <div className='row'>
           <div className='col-sm-3'>
-            <h4>Nosotros</h4>
+            <h6>Nosotros</h6>
             <Link href='/about'>
               <a>Conoce más</a>
             </Link>
           </div>
           <div className='col-sm-3'>
-            <h4>Servicios</h4>
+            <h6>Servicios</h6>
             <Link href='/'>
               <a>Todos los productos</a>
             </Link>
           </div>
           <div className='col-sm-6'>
-            <h4>Hecho para</h4>
+            <h6>Hecho para</h6>
             <p>La comunidad de desarrolladores JavaScript que usan <a href='https://nextjs.org/'>Next.js</a> con el fin de aprender este magnifico Framework.</p>
             <div className='d-flex'>
               <div className='mr-3'>
