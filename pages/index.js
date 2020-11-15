@@ -5,13 +5,17 @@ import { useEffect, useState } from "react"
 
 export default function Home() {
   const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    setLoading(true)
+
     window
       .fetch('/api/avo')
       .then((response) => response.json())
       .then(({ data, length }) => {
         setProducts(data)
+        setLoading(false)
       })
   }, [])
 
@@ -23,7 +27,7 @@ export default function Home() {
           <a className='mt-5'>¿Deberia comer un avo hoy?</a>
         </Link>
       </div>
-      <ProductList products={products} />
+      <ProductList products={products} loading={loading} />
     </>
   )
 }
