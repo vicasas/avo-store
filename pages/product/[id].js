@@ -2,21 +2,21 @@ import { useEffect, useState } from "react"
 import { useRouter } from 'next/router'
 
 export default function Home() {
-  const router = useRouter()
+  const { query } = useRouter()
   const [product, setProduct] = useState({})
 
-  const param = router.query?.id
+  const param = query?.id
 
   useEffect(() => {
-    if (param !== undefined) {
+    if (param !== undefined) { // query.id
       window
-        .fetch(`/api/avo/${router.query.id}`)
+        .fetch(`/api/avo/${query.id}`)
         .then((response) => response.json())
         .then((data) => {
           setProduct(data)
         })
     }
-  }, [param])
+  }, [param]) // query.id
 
   return (
     <div>
