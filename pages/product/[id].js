@@ -10,13 +10,13 @@ export default function Home() {
   useEffect(() => {
     if (param !== undefined) {
       window
-        .fetch(`/api/avo/${router.query?.id}`)
+        .fetch(`/api/avo/${router.query.id}`)
         .then((response) => response.json())
         .then((data) => {
           setProduct(data)
         })
     }
-  }, [])
+  }, [param])
 
   return (
     <div>
