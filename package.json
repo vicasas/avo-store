@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:inspect": "npm --node-options=--inspect=0.0.0.0:9229 run dev",
     "build": "next build",
     "start": "next start"
   },
