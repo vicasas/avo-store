@@ -21,11 +21,8 @@ export default function Home() {
 
   return (
     <>
-      <div className='text-center my-4'>
+      <div className='text-center my-5'>
         <TitleHome />
-        <Link href='/yes-or-no' passHref>
-          <a className='mt-5'>¿Deberia comer un avo hoy?</a>
-        </Link>
       </div>
       <ProductList products={products} loading={loading} />
     </>
