@@ -1,4 +1,4 @@
-export default function IconAvocado({ size = '52px', ...otherProps }) {
+export default function IconAvocado({ size = 32, ...otherProps }) {
   return (
     <svg width={size} height={size} viewBox="-99 0 511 512" {...otherProps}>
       <path
