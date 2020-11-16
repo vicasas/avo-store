@@ -5,13 +5,13 @@ export default function Footer() {
     <footer className='py-4 mt-5 border-top'>
       <div className='container'>
         <div className='row'>
-          <div className='col-sm-3'>
+          <div className='col-sm-3 mb-4 mb-sm-0'>
             <h6>Nosotros</h6>
             <Link href='/about'>
               <a>Conoce más</a>
             </Link>
           </div>
-          <div className='col-sm-3'>
+          <div className='col-sm-3 mb-4 mb-sm-0'>
             <h6>Servicios</h6>
             <Link href='/'>
               <a>Todos los productos</a>

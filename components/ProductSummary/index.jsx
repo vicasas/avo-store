@@ -3,7 +3,7 @@ import AddToCart from "@components/AddToCart";
 export default function ProductSummary({ product }) {
   return (
     <section className='row mb-4'>
-      <div className='col-sm-5'>
+      <div className='col-sm-5 d-flex justify-content-center'>
         <img src={product.image} className='img-fluid' alt='' title='' width={340} height={340} />
       </div>
       <div className='col-sm-7'>
