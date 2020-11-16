@@ -12,7 +12,7 @@ export default function Navbar() {
             <span className='ml-2'>Avo Store</span>
           </a>
         </Link>
-        <Link href='/'>
+        <Link href='/cart'>
           <a>
             <IconBasket />
             <span className='ml-2'>
