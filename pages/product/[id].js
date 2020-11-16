@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useRouter } from 'next/router'
+import ProductSummary from "@components/ProductSummary"
 
 export default function Home() {
   const { query } = useRouter()
@@ -19,10 +20,8 @@ export default function Home() {
   }, [param]) // query.id
 
   return (
-    <div>
-      <ul>
-        <li>{product.name}</li>
-      </ul>
+    <div className='container'>
+      <ProductSummary product={product} />
     </div>
   )
 }
