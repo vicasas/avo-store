@@ -1,8 +1,11 @@
-import IconAvocado from '@components/Icons/IconAvocado'
-import IconBasket from '@components/Icons/IconBasket'
 import Link from 'next/link'
+import IconAvocado from '@components/Icons/IconAvocado'
+import ShoppingCart from '@components/ShoppingCart'
+import { useCart } from '@store/Cart'
 
 export default function Navbar() {
+  const { count: cartCount } = useCart()
+
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container">
@@ -14,11 +17,7 @@ export default function Navbar() {
         </Link>
         <Link href='/cart'>
           <a>
-            <IconBasket />
-            <span className='ml-2'>
-              Canasta
-              <span className='ml-1'>0</span>
-            </span>
+            <ShoppingCart cartCount={cartCount} name="Canasta" />
           </a>
         </Link>
       </div>

@@ -14,7 +14,7 @@ export default function ProductSummary({ product }) {
             <span className='chip'>{`sku: ${product.sku}`}</span>
           </div>
         </div>
-        <AddToCart />
+        <AddToCart product={product} />
       </div>
       <style jsx>{`
         .chip {
