@@ -47,7 +47,7 @@ export default function AddToCart({ product }) {
   return (
     <>
     <div className="input-group mb-1">
-      <input type="number" className="form-control" placeholder="Quantity" aria-label="Recipient's username" aria-describedby="button-addon2" onChange={handleChange} />
+      <input type="number" className="form-control" placeholder="Quantity" aria-label="Recipient's username" aria-describedby="button-addon2" onChange={handleChange} value={quantity} />
       <button className="btn btn-primary" type="button" id="button-addon2" onClick={handleSubmit} disabled={!!loading}>Add to Cart</button>
     </div>
     {!error && <span style={{ color: 'red' }}>{error}</span>}

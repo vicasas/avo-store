@@ -1,10 +1,16 @@
+import CartItemList from "@components/CartItemList"
+import CartSummary from "@components/CartSummary"
+import { useCartMutations } from "@store/Cart"
+import { useCart } from "@store/Cart"
+
 export default function Cart() {
+  const { items, count } = useCart()
+  const { removeFromCart } = useCartMutations()
+
   return (
     <div className='container'>
-      <div className="alert alert-warning" role="alert">
-        <h4 className="alert-heading">Your cart is empty</h4>
-        <p>You will need to add some items to the cart before you can checkout.</p>
-      </div>
+      <CartItemList items={items} removeFromCart={removeFromCart} />
+      <CartSummary totalAmount={count} />
     </div>
   )
 }
