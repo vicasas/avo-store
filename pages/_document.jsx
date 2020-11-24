@@ -9,8 +9,13 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
-        <Head />
+      <Html lang='es'>
+        <Head>
+          {/* FavIcon */}
+          {/* WebFont */}
+          {/* StyleSheets */}
+          {/* Scripts */}
+        </Head>
         <body>
           <Main />
           <NextScript />

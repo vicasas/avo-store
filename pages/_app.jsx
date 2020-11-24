@@ -6,6 +6,12 @@ import '../vendor/bootstrap/bootstrap.css'
 import CartProvider from '@store/Cart'
 
 function MyApp({ Component, pageProps }) {
+  // Aditional props
+  // Aditional layout
+  // Aditionat CSS - Boostrap, Materialize...
+  // Aditional global store
+  // Handle errors - componentDidCatch
+
   return (
     <CartProvider>
       <Layout>

@@ -1,11 +1,10 @@
 import Link from 'next/link'
 
-export default function ProductList({ products, loading }) {
+export default function ProductList({ products }) {
   return (
     <div className='container'>
       <div className='row'>
-        {!loading ? (
-          products.map((product) => (
+        {products.map((product) => (
             <div key={product.id} className='col-sm-6 col-md-4'>
               <Link href="/product/[id]" as={`/product/${product.id}`} passHref>
                 <div className='card mb-5'>
@@ -17,14 +16,7 @@ export default function ProductList({ products, loading }) {
                 </div>
               </Link>
             </div>
-          ))
-        ) : (
-            [0, 1, 2].map((num) => (
-              <div key={num} className='col-sm-6 col-md-4'>
-                loading...
-              </div>
-            ))
-          )}
+          ))}
       </div>
     </div>
   )
